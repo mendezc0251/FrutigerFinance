@@ -7,35 +7,23 @@ export default function Home() {
   return (
     <main>
       <h1 className="home--title">
-        <span style={{color: '#3dc9dc'}}>F</span>
-        <span style={{color: '#2fa7b9'}}>r</span>
-        <span style={{color: '#3dc9dc'}}>u</span>
-        <span style={{color: '#2fa7b9'}}>t</span>
-        <span style={{color: '#3dc9dc'}}>i</span>
-        <span style={{color: '#2fa7b9'}}>g</span>
-        <span style={{color: '#3dc9dc'}}>e</span>
-        <span style={{color: '#2fa7b9'}}>r </span>
-        <span style={{color: '#3dc9dc'}}>F</span>
+        <span style={{color: '#2fa7b9'}}>F</span>
+        <span style={{color: '#3dc9dc'}}>r</span>
+        <span style={{color: '#2fa7b9'}}>u</span>
+        <span style={{color: '#3dc9dc'}}>t</span>
         <span style={{color: '#2fa7b9'}}>i</span>
-        <span style={{color: '#3dc9dc'}}>n</span>
-        <span style={{color: '#2fa7b9'}}>a</span>
-        <span style={{color: '#3dc9dc'}}>n</span>
-        <span style={{color: '#2fa7b9'}}>c</span>
-        <span style={{color: '#3dc9dc'}}>e</span>
+        <span style={{color: '#3dc9dc'}}>g</span>
+        <span style={{color: '#2fa7b9'}}>e</span>
+        <span style={{color: '#3dc9dc'}}>r </span>
+        <span style={{color: '#2fa7b9'}}>F</span>
+        <span style={{color: '#3dc9dc'}}>i</span>
+        <span style={{color: '#2fa7b9'}}>n</span>
+        <span style={{color: '#3dc9dc'}}>a</span>
+        <span style={{color: '#2fa7b9'}}>n</span>
+        <span style={{color: '#3dc9dc'}}>c</span>
+        <span style={{color: '#2fa7b9'}}>e</span>
         </h1>
-      <section>
-        {expenses.map((expense) => (
-          <div key = {expense.id}>
-            <p style={{color: '#2e2e2e'}}>
-              {expense.name} - ${expense.amount} ({expense.category})
-              <label className="recurring--checkbox">
-                Recurring?
-                <input type = "checkbox" checked ={expense.reoccuring} readOnly />
-              </label>
-            </p>
-          </div>
-        ))}
-      </section>
+      <Button text="Begin!"/>
     </main>
   );
 }
