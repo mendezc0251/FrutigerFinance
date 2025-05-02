@@ -23,7 +23,8 @@ export default function Home() {
         <span style={{color: '#3dc9dc'}}>c</span>
         <span style={{color: '#2fa7b9'}}>e</span>
         </h1>
-      <Button text="Begin!"/>
+        <div className="home--button"><Button text="Begin!" color="#3dc9dc"/></div>
+        
     </main>
   );
 }
