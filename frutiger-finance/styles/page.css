@@ -1,11 +1,12 @@
 .home--title{
     text-align: center;
-    font-size: 100px;
+    font-size: 200px;
+    margin-top: 15%;
 }
 .home--button{
     display:flex;
     justify-content: center;
     align-items: center;
     height:200px;
-    border: 3px #a6fff4
+    border: 6px #a6fff4
 }

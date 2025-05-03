@@ -1,10 +1,17 @@
+'use client'
 import '@/components/Button.module.css'
-export default function Button({text, color}: {text: string, color: string}){
+import {useState} from "react"
+export default function Button({text, color, hcolor, height, width, font}: {text: string, color: string, hcolor: string, height: number, width: number, font: number}){
+    const [hover, setHover] = useState(true)
     return(
-        <button style={{
-            backgroundColor: color,
-            width:100,
-            height:50 
+        <button
+        onMouseEnter={()=>setHover(false)}
+        onMouseLeave={()=>setHover(true)} 
+        style={{
+            backgroundColor: hover ? color: hcolor,
+            width:width,
+            height:height,
+            fontSize: font
         }}>{text}</button>
     )
 }
