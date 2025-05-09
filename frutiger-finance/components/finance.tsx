@@ -8,7 +8,12 @@ export default function Begin() {
   return (
             <div>
                 <AnimatePresence initial={false}>
-                  {isVisible ? (<motion.h1 className="home--title">
+                  {isVisible ? (<motion.h1
+                  initial={{opacity:0, scale:0}}
+                  animate={{opacity:1, scale:1}}
+                  exit={{opacity:0, scale:0, y:-400}}
+                  transition={{type: "spring"}}
+                  className="home--title">
                   <span style={{color: '#2fa7b9'}}>F</span>
                   <span style={{color: '#3dc9dc'}}>r</span>
                   <span style={{color: '#2fa7b9'}}>u</span>
@@ -27,14 +32,19 @@ export default function Begin() {
                   </motion.h1>) : null}
                 </AnimatePresence>
                 <AnimatePresence initial={false}>
-                  {isVisible ? (<motion.div className="home--button">
+                  {isVisible ? (<motion.div className="home--button"
+                  initial ={{opacity:0, scale:0}}
+                  animate={{opacity:1, scale:1}}
+                  exit={{opacity:1, scale:1, y:400}}
+                  >
                     <Button 
                     text="Begin!" 
                     color="#3dc9dc" 
                     hcolor="#2fa7b9" 
                     height={100} 
                     width={200} 
-                    font={65}/>
+                    font={65}
+                    onClick={()=>setIsVisible(false)}/>
                   </motion.div>) : null}
                 </AnimatePresence>
             </div>
